@@ -1,4 +1,5 @@
 user:
-  account: B22080126
-  password: zht20040723zht.
-proxy: cmcc
+  account: ###
+  password: ###
+# 运营商有：cmcc、chinaNet
+proxy: ###
