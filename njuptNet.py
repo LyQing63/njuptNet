@@ -58,9 +58,9 @@ if __name__== "__main__" :
         config = yaml.load(file, Loader=yaml.CLoader)
         account = config.get('user').get('account')
         password = config.get('user').get('password')
-        login_method = config.get('proxy')
+        login_method = '%40' + config.get('proxy')
     
-    LOGIN_URL = f'https://p.njupt.edu.cn:802/eportal/portal/login?login_method=1&user_account=%2C0%2C{account}%40{login_method}&user_password={password}&wlan_user_ip={IP}&wlan_user_ipv6=&wlan_user_mac=000000000000&wlan_ac_ip=&wlan_ac_name=&jsVersion=4.1.3&terminal_type=1&lang=zh-cn&v=7241&lang=zh'
+    LOGIN_URL = f'https://p.njupt.edu.cn:802/eportal/portal/login?login_method=1&user_account=%2C0%2C{account}{login_method}&user_password={password}&wlan_user_ip={IP}&wlan_user_ipv6=&wlan_user_mac=000000000000&wlan_ac_ip=&wlan_ac_name=&jsVersion=4.1.3&terminal_type=1&lang=zh-cn&v=7241&lang=zh'
     ISLOGIN_URL = f'https://p.njupt.edu.cn:802/eportal/portal/online_list?user_account=&user_password=&wlan_user_mac=000000000000&wlan_user_ip={IP}&curr_user_ip={IP}&jsVersion=4.X&v=6900&lang=zh'
     LOGOUT_URL = f'https://p.njupt.edu.cn:802/eportal/portal/logout?login_method=1&user_account=drcom&user_password=123&ac_logout=1&register_mode=1&wlan_user_ip={IP}&wlan_user_ipv6=&wlan_vlan_id=0&wlan_user_mac=000000000000&wlan_ac_ip=&wlan_ac_name=&jsVersion=4.1.3&v=791&lang=zh'
 
